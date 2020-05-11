@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        #container{
+            width:1000px;height:400px;
+            margin:0 auto;
+            overflow: hidden;
+            position:relative;
+        }
+        #container>.imgs{
+            list-style: none;
+        }
+        #container>.imgs>li{
+            float:left;
+        }
+        #container>.left,#container>.right{
+            width:35px;height: 70px;
+            position:absolute;
+            top:165px;
+            left:3px;
+            background-image:url(index/arrow-left.png);
+            background-repeat: no-repeat;
+            background-position:center center;
+            background-color:rgba(0,0,0,0.1);
+            border-radius:5px;
+        }
+        #container>.right{
+            left:959px;
+            background-image:url(index/arrow-right.png);
+            background-repeat: no-repeat;
+            background-position:center center;
+            background-color:rgba(0,0,0,0.1);
+            border-radius:5px;
+        }
+        .index{
+            width:88px;height:20px;
+            list-style:none;
+            position:absolute; /*不写的话会被relative盖住 */
+            top:350px;left:450px;
+        }
+        .index>li{
+            width:12px;height:12px;
+            background:#fff;
+            float:left;
+            border-radius:50%;
+        }
+        .index li+li{
+            margin-left:5px;
+        }
+        .index>.active{
+            background:#4480e1;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul class="imgs">
+        <li>
+            <a href="#">
+                <img src="index/banner1.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="index/banner2.png" alt="">
+            </a>
+        </li>
+        <li >
+            <a href="#">
+                <img src="index/banner3.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="index/banner4.png" alt="">
+            </a>
+        </li>
+
+    </ul>
+    <a href="#" class="left"></a>
+    <a href="#" class="right"></a>
+    <ul class="index">
+        <li></li>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
